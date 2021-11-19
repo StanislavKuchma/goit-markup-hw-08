@@ -1,0 +1,141 @@
+/*Header*/
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ececec;
+}
+.nav {
+  display: none;
+}
+.logo {
+  display: none;
+}
+.nav__list {
+  display: none;
+}
+/*навигация*/
+// .nav__link {
+//   color: var(--text--color);
+//   text-decoration: none;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.02em;
+
+//   position: relative;
+
+//   transition: color 250ms var(--time--animation);
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     display: block;
+//     width: 100%;
+//     height: 4px;
+//     border-radius: 4px;
+//     bottom: -32px;
+//     background-color: var(--accent--color);
+//     width: 0%;
+//   }
+//   &.current::before {
+//     content: "";
+//     position: absolute;
+//     display: block;
+//     width: 100%;
+//     height: 4px;
+//     border-radius: 4px;
+//     bottom: -32px;
+//     background-color: var(--accent--color);
+//     width: 100%;
+//   }
+
+//   &:hover,
+//   &:focus {
+//     color: var(--accent--color);
+//   }
+//   &.current {
+//     color: var(--accent--color);
+//   }
+// }
+
+// .nav__list {
+//   display: flex;
+//   align-items: center;
+// }
+// .nav {
+//   display: flex;
+
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+// .contact__icon {
+//   margin-right: 10px;
+//   fill: currentColor;
+
+//   .nav__item:focus &,
+//   .nav__item:hover & {
+//     fill: var(--accent--color);
+//   }
+// }
+
+// .contact__link {
+//   display: flex;
+//   align-items: center;
+// }
+// .nav__item {
+//   transition: color 250ms var(--time--animation),
+//     fill 250ms var(--time--animation);
+
+//   &:not(:last-child) {
+//     margin-right: 50px;
+//   }
+
+//   &:focus,
+//   &:hover {
+//     color: var(--accent--color);
+//     fill: var(--accent--color);
+//   }
+// }
+
+// .contact {
+//   display: flex;
+//   margin-left: auto;
+//   align-items: center;
+// }
+
+// .contact__item {
+//   transition: color 250ms var(--time--animation),
+//     fill 250ms var(--time--animation);
+
+//   &:not(:last-child) {
+//     margin-right: 50px;
+//   }
+
+//   &:focus,
+//   &:hover {
+//     color: var(--accent--color);
+//     fill: var(--accent--color);
+//   }
+// }
+// .header-conteiner {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .contact {
+//   & a {
+//     color: var(--primary--text--color);
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     letter-spacing: 0.02em;
+
+//     transition: color 250ms var(--time--animation);
+//   }
+
+//   & a:hover,
+//   & a:focus {
+//     color: var(--accent--color);
+//   }
+// }
