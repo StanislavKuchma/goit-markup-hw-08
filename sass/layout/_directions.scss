@@ -1,5 +1,7 @@
 .our-directions {
-  padding-top: 0px;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .directions {

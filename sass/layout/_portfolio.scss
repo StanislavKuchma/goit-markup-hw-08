@@ -3,24 +3,49 @@
 }
 .portfolio-buttons {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 
-  margin-bottom: 34px;
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+    margin-bottom: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 34px;
+  }
 }
 
 .projects-cards-title p {
   color: var(--primary--text--color);
 }
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
 }
 .projects-cards {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-bottom: 30px;
+  @media screen and (max-width: 1199px) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .projects-card-wrap {
