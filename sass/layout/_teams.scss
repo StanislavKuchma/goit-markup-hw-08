@@ -13,7 +13,9 @@
 .team {
   display: flex;
   flex-wrap: wrap;
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
     margin: -15px;
   }
 
@@ -22,47 +24,52 @@
     flex-wrap: wrap;
     margin-left: -30px;
   }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
 }
 
 .professionals-card {
-  @media screen and (min-width: 480px) {
+  text-align: center;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
 
   @media screen and (min-width: 1200px) {
-    text-align: center;
     flex-basis: calc(100% / 4 - 30px);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
     margin-left: 30px;
   }
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .professionals-card-title {
+  text-align: center;
   padding-bottom: 30px;
   padding-top: 30px;
   background-color: var(--main--backgraundcolor);
 
-  border-bottom: 1px Solid #eeeeee;
-  border-right: 1px Solid #eeeeee;
-  border-left: 1px Solid #eeeeee;
+  // border: 1px Solid var(--text--color);
 }
 
 .name {
   margin-bottom: 10px;
 }
 
-// .team {
-//   display: flex;
-//   flex-wrap: wrap;
-//   @media screen and (min-width: 768px) {
-//     margin: -15px;
-//   }
-
-//   @media screen and (min-width: 1200px) {
-//     margin-left: -30px;
-//   }
-// }
 .team .profesion {
   font-size: 16px;
   line-height: 1.19;

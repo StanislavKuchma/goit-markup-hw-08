@@ -43,6 +43,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -181,6 +183,15 @@ body {
     padding-top: 94px;
     padding-bottom: 94px;
   }
+}
+
+.section .section-title {
+  color: var(--text--color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .form {
@@ -451,6 +462,12 @@ body {
   margin-right: 20px;
 }
 
+.mobil-social-network-link::after {
+  content: "";
+  margin-left: 10px;
+  border-right: 1px solid var(--text--color);
+}
+
 .menu-toggle {
   height: 40px;
   width: 40px;
@@ -671,23 +688,25 @@ body {
 .hero-title {
   color: var(--text--color--white);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
+  margin-bottom: 30px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 696px;
+  width: 360px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
 }
 
-.section-title {
-  color: var(--text--color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  margin-bottom: 50px;
-  text-align: center;
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .benefits-title {
@@ -800,8 +819,10 @@ body {
   flex-wrap: wrap;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .team {
+    display: flex;
+    flex-wrap: wrap;
     margin: -15px;
   }
 }
@@ -814,11 +835,26 @@ body {
   }
 }
 
-.professionals-card {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+@media screen and (max-width: 767px) {
+  .team {
+    margin-bottom: 30px;
+  }
 }
 
-@media screen and (min-width: 480px) {
+.professionals-card {
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (max-width: 767px) {
+  .professionals-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .professionals-card {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
@@ -827,19 +863,19 @@ body {
 
 @media screen and (min-width: 1200px) {
   .professionals-card {
-    text-align: center;
     flex-basis: calc(100% / 4 - 30px);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
     margin-left: 30px;
   }
 }
 
 .professionals-card-title {
+  text-align: center;
   padding-bottom: 30px;
   padding-top: 30px;
   background-color: var(--main--backgraundcolor);
-  border-bottom: 1px Solid #eeeeee;
-  border-right: 1px Solid #eeeeee;
-  border-left: 1px Solid #eeeeee;
 }
 
 .name {
@@ -1174,6 +1210,11 @@ body {
   color: var(--primary--text--color);
 }
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media screen and (min-width: 768px) {
   .projects {
     display: flex;
@@ -1191,7 +1232,17 @@ body {
   }
 }
 
-@media screen and (max-width: 1199px) {
+.projects-cards {
+  border: 1px Solid #eeeeee;
+}
+
+@media screen and (max-width: 767px) {
+  .projects-cards:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .projects-cards {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
@@ -1201,9 +1252,16 @@ body {
 @media screen and (min-width: 1200px) {
   .projects-cards {
     flex-basis: calc(100% / 3 - 30px);
+    margin-right: 0;
+    margin-top: 0;
     margin-left: 30px;
     margin-bottom: 30px;
   }
+}
+
+.projects-cards:focus, .projects-cards:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms var(--time--animation);
 }
 
 .projects-card-wrap {
@@ -1212,11 +1270,12 @@ body {
 }
 
 .projects-card-text {
+  height: 100%;
   position: absolute;
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
-  padding: 64px 24px;
+  padding: 70px 24px;
   top: 0;
   left: 0;
   transform: translateY(110%);
@@ -1232,18 +1291,10 @@ body {
 
 .projects-focus {
   display: block;
-  transition: box-shadow 250ms var(--time--animation);
-}
-
-.projects-focus:focus, .projects-focus:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-cards-title {
   padding: 20px 24px;
-  border-bottom: 1px Solid #eeeeee;
-  border-right: 1px Solid #eeeeee;
-  border-left: 1px Solid #eeeeee;
 }
 
 .projects-cards-title .title {

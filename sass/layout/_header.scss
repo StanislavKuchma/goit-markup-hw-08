@@ -79,6 +79,11 @@
 
   padding-top: 64px;
   margin-right: 20px;
+  &::after {
+    content: "";
+    margin-left: 10px;
+    border-right: 1px solid var(--text--color);
+  }
 }
 
 // .menu .link {
