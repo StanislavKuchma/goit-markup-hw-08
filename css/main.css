@@ -449,6 +449,7 @@ body {
 
 .mobil-social-network {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mobil-social-network-link {
@@ -459,13 +460,23 @@ body {
   letter-spacing: 0.02em;
   color: var(--accent--color);
   padding-top: 64px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .mobil-social-network-link::after {
   content: "";
   margin-left: 10px;
-  border-right: 1px solid var(--text--color);
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.last {
+  margin-right: 0;
+}
+
+.last::after {
+  content: "";
+  margin-left: 0;
+  border-right: none;
 }
 
 .menu-toggle {
@@ -483,15 +494,20 @@ body {
   outline: none;
 }
 
+.menu-toggle:focus .burger-icon,
+.menu-toggle:hover .burger-icon {
+  fill: var(--accent--color);
+}
+
+.menu-toggle:focus .close-btn-icon,
+.menu-toggle:hover .close-btn-icon {
+  fill: var(--accent--color);
+}
+
 @media (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .menu-container {
@@ -526,6 +542,20 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .contact__icon--mail {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contact__icon--tel {
+    width: 10px;
+    height: 14px;
+  }
 }
 
 /*навигация*/
@@ -679,10 +709,40 @@ body {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-Img.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/hero/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../img/hero/hero2x.jpg);
+  }
+}
+
+@media (min-width: 480px) {
+  .hero {
+    background-image: url(../../img/hero/hero-tablet.jpg);
+  }
+}
+
+@media (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../img/hero/hero-tablet2x.jpg);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: url(../../img/hero/hero-desktop.jpg);
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../img/hero/hero-desktop2x.jpg);
+  }
 }
 
 .hero-title {
