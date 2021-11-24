@@ -201,6 +201,7 @@ body {
 }
 
 .form-title {
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -243,6 +244,13 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1199px) {
+  .form-checkbox-label {
+    font-size: 12px;
+    line-height: 1.17px;
+  }
 }
 
 .form-link-agreement {
@@ -322,12 +330,12 @@ body {
   border-radius: 4px;
 }
 
-.form-checkbox:checked + .form-checkbox-label::before::before {
+.form-checkbox:checked + .form-checkbox-label::before {
   background-image: url(../images/icon-check.svg);
   border: none;
 }
 
-.form-checkbox:focus + .form-checkbox-label::before::before {
+.form-checkbox:focus + .form-checkbox-label::before {
   outline: 1px solid var(--text--color);
 }
 
@@ -343,6 +351,13 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--time--animation);
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 .modal-close-icon {
