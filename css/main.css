@@ -340,8 +340,8 @@ body {
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 100vw;
+  height: 100vh;
   border-radius: 4px;
   padding: 40px;
   background-color: #ffffff;
@@ -353,10 +353,17 @@ body {
   transition: transform 250ms var(--time--animation);
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) {
   .modal {
     width: 450px;
     height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
   }
 }
 
