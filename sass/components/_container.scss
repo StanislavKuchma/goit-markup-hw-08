@@ -1,12 +1,8 @@
 .conteiner {
-  // display: block;
-  // width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  // background-color: aqua;
 
   @media screen and (min-width: 480px) {
     width: 480px;
@@ -19,10 +15,3 @@
     width: 1200px;
   }
 }
-
-// .conteiner {
-//   width: 1200px;
-//   padding-left: 15px;
-//   padding-right: 15px;
-//   margin: 0 auto;
-// }

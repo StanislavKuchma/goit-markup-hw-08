@@ -7,7 +7,10 @@
 
   @media screen and (max-width: 1199px) {
     margin-top: 60px;
-    margin-bottom: 14px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
   }
 
   @media screen and (min-width: 1200px) {
@@ -65,7 +68,7 @@
 
     transition: box-shadow 250ms var(--time--animation);
   }
-  border: 1px Solid #eeeeee;
+  border: 1px solid #eeeeee;
 }
 
 .projects-card-wrap {
@@ -78,7 +81,16 @@
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
-  padding: 70px 24px;
+  // padding: 70px 24px;
+  @media screen and (max-width: 479px) {
+    padding: auto;
+  }
+
+  @media screen and (min-width: 480px) {
+    padding: 70px 24px;
+  }
+  // padding: 70px 24px;
+  // padding: auto;
 
   top: 0;
   left: 0;
@@ -99,6 +111,7 @@
 
 .projects-cards-title {
   padding: 20px 24px;
+  padding-right: 0;
 }
 .projects-cards-title .title {
   margin-bottom: 4px;

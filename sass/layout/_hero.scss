@@ -1,8 +1,8 @@
 .hero {
   background-color: var(--hero--backgraundcolor);
 
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
 
   max-width: 1600px;
@@ -18,32 +18,57 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 @media (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../img/hero/hero2x.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero/hero2x.jpg);
   }
 }
 
 @media (min-width: 481px) {
   .hero {
-    background-image: url(../img/hero/hero-tablet.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero/hero-tablet.jpg);
   }
   @media (min-resolution: 2dppx) {
     .hero {
-      background-image: url(../img/hero/hero-tablet2x.jpg);
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/hero/hero-tablet2x.jpg);
     }
   }
 }
 
 @media (min-width: 769px) {
   .hero {
-    background-image: url(../img/hero/hero-desktop.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero/hero-desktop.jpg);
   }
   @media (min-resolution: 2dppx) {
     .hero {
-      background-image: url(../img/hero/hero-desktop2x.jpg);
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/hero/hero-desktop2x.jpg);
     }
   }
 }
@@ -60,7 +85,9 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  width: 360px;
+  @media screen and (min-width: 360px) {
+    width: 360px;
+  }
   margin-left: auto;
   margin-right: auto;
 
@@ -70,6 +97,5 @@
     width: 696px;
     margin-left: auto;
     margin-right: auto;
-    // margin-bottom: 30px;
   }
 }
