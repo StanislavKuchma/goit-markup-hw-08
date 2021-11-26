@@ -36,8 +36,12 @@
 
 .mobile-menu-tel {
   font-weight: 500;
-  font-size: 6vw;
   line-height: 1.17;
+
+  @media screen and (max-width: 479px) {
+    font-size: 6vw;
+  }
+  font-size: 34px;
 
   letter-spacing: 0.02em;
   color: var(--accent--color);
@@ -65,8 +69,6 @@
 
   letter-spacing: 0.02em;
   color: var(--accent--color);
-
-  // padding-top: 64px;
 
   margin-right: 10px;
 
@@ -164,9 +166,6 @@
 
 .contact__icon--mail {
   @media screen and (max-width: 1199px) {
-    // display: inline-block;
-    // margin-bottom: 10px;
-
     width: 14px;
     height: 10px;
   }
@@ -211,6 +210,10 @@
     bottom: -32px;
     background-color: var(--accent--color);
     width: 100%;
+
+    @media screen and (max-width: 1199px) {
+      bottom: -39px;
+    }
   }
 
   &:hover,
