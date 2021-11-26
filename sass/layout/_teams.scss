@@ -62,8 +62,6 @@
   padding-bottom: 30px;
   padding-top: 30px;
   background-color: var(--main--backgraundcolor);
-
-  // border: 1px Solid var(--text--color);
 }
 
 .name {
@@ -84,9 +82,7 @@
     margin-right: 0;
   }
 }
-// .social-item:last-child {
-//   margin-right: 0;
-// }
+
 .social-link {
   width: 100%;
   height: 100%;
@@ -98,7 +94,7 @@
   justify-content: center;
 
   transition: background-color 250ms var(--time--animation),
-    fill 250ms var(--time--animation);
+    color 250ms var(--time--animation);
 
   &:hover,
   &:focus {
